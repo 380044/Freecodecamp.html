@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #4facfe, #00f2fe);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      color: #555;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .inline {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    button {
+      background: #4facfe;
+      color: white;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0077ff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Title -->
+    <h1 id="title">Student Feedback Form</h1>
+
+    <!-- Description -->
+    <p id="description">Please fill out this survey to help us improve.</p>
+
+    <!-- Form -->
+    <form id="survey-form">
+
+      <!-- Name -->
+      <label id="name-label" for="name">Name</label>
+      <input 
+        type="text" 
+        id="name" 
+        placeholder="Enter your name" 
+        required
+      >
+
+      <!-- Email -->
+      <label id="email-label" for="email">Email</label>
+      <input 
+        type="email" 
+        id="email" 
+        placeholder="Enter your email" 
+        required
+      >
+
+      <!-- Number -->
+      <label id="number-label" for="number">Age</label>
+      <input 
+        type="number" 
+        id="number" 
+        placeholder="Enter your age" 
+        min="10" 
+        max="100"
+      >
+
+      <!-- Dropdown -->
+      <label for="dropdown">Your Role</label>
+      <select id="dropdown">
+        <option value="">Select role</option>
+        <option value="student">Student</option>
+        <option value="developer">Developer</option>
+      </select>
+
+      <!-- Radio Buttons -->
+      <label>Would you recommend us?</label>
+      <input type="radio" name="recommend" value="yes" class="inline"> Yes
+      <input type="radio" name="recommend" value="no" class="inline"> No
+
+      <!-- Checkboxes -->
+      <label>What do you like?</label>
+      <input type="checkbox" value="design" class="inline"> Design
+      <input type="checkbox" value="content" class="inline"> Content
+      <input type="checkbox" value="features" class="inline"> Features
+
+      <!-- Textarea -->
+      <label>Additional Comments</label>
+      <textarea placeholder="Write your feedback here..."></textarea>
+
+      <!-- Submit -->
+      <button id="submit" type="submit">Submit</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
